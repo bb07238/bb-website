@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-sky-500 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">ब</span>
             </div>
             <div>

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: "Premium quality god idols, marble dust murtis, ittars, agarbattis, Laddu Gopal poshak, jewellery and vastu items. Shop authentic spiritual products from Vrindavan.",
   keywords: "god idols, marble murtis, ittars, agarbattis, pooja items, vastu items, laddu gopal poshak, radha rani jewellery, spiritual items, vrindavan",
   authors: [{ name: "Banke Bihari Creations" }],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: "Banke Bihari Creations - Divine Spiritual Items",
     description: "Your trusted destination for authentic spiritual items, god idols, and pooja essentials from Vrindavan.",
