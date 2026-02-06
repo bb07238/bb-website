@@ -20,6 +20,7 @@ export default function Home() {
               alt="Radha Krishna Divine - Banke Bihari Creations"
               className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
           </div>
           {/* Modern geometric patterns */}
           <div className="absolute inset-0 opacity-10">
@@ -31,7 +32,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl"
+              className="max-w-4xl text-white"
             >
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full mb-6">
                 <span className="text-white text-sm font-medium">🕉️ Divine Spiritual Collection</span>
