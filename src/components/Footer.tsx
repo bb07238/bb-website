@@ -62,7 +62,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-sm text-gray-600">+91 98765 43210</p>
+                  <p className="text-sm text-gray-600">+91 94656 54578</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -77,9 +77,9 @@ const Footer = () => {
                 <div>
                   <p className="font-medium">Address</p>
                   <p className="text-sm text-gray-600">
-                    Shop No. 123, Main Market<br />
-                    Vrindavan, Mathura<br />
-                    Uttar Pradesh - 281121
+                    Shop No. 238, Phase 7<br />
+                    Sector 61, Sahibzada Ajit Singh Nagar<br />
+                    Punjab - 160062
                   </p>
                 </div>
               </div>

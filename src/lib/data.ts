@@ -11,11 +11,11 @@ export const categories: Category[] = [
     products: [
       {
         id: 'krishna-idol-1',
-        name: 'Banke Bihari Ji Marble Idol',
+        name: 'Radha krishan jugal jodi',
         category: 'god-idols',
-        description: 'Beautiful white marble idol of Banke Bihari Ji with intricate details',
-        image: '/images/products/krishna-idol-1.jpg',
-        features: ['Pure White Marble', 'Handcrafted', '24-inch height']
+        description: 'Divine Radha Krishna pair in loving embrace, symbolizing eternal love and devotion',
+        image: '/images/products/jugaljodi.jpg',
+        features: ['Asthdhatu Brass', 'Handcrafted', '9-inch height', 'Divine Finish']
       },
       {
         id: 'radha-krishna-idol-1',
@@ -54,7 +54,7 @@ export const categories: Category[] = [
         name: 'Premium Rose Ittar',
         category: 'ittars',
         description: 'Pure rose extract itt ar with long-lasting fragrance',
-        image: '/images/products/rose-ittar-1.jpg',
+        image: '/images/products/roseattar.jpg',
         features: ['Natural Ingredients', 'Alcohol Free', '15ml bottle']
       },
       {
@@ -94,7 +94,7 @@ export const categories: Category[] = [
         name: 'Silk Poshak for Laddu Gopal',
         category: 'poshak-jewellery',
         description: 'Elegant silk dress with intricate embroidery',
-        image: '/images/products/laddu-gopal-poshak-1.jpg',
+        image: '/images/products/dress.jpg',
         features: ['Pure Silk', 'Hand Embroidered', 'Available in multiple sizes']
       },
       {
@@ -131,10 +131,10 @@ export const categories: Category[] = [
     products: [
       {
         id: 'vastu-pyramid-1',
-        name: 'Vastu Energy Pyramid',
+        name: 'Crystal Energy Pyramid for Vastu Correction',
         category: 'vastu-items',
         description: 'Energy pyramid for vastu correction',
-        image: '/images/products/vastu-pyramid-1.jpg',
+        image: '/images/products/pyramid.jpg',
         features: ['Crystal Material', 'Energy Balancing', 'Multi-purpose']
       }
     ]
@@ -149,8 +149,12 @@ export const contactInfo: ContactInfo = {
 };
 
 export const featuredProducts: Product[] = [
-  categories[0].products[0], // Banke Bihari Ji Marble Idol
+  categories[0].products[0], // Radha krishan jugal jodi
   categories[2].products[0], // Premium Rose Ittar
   categories[4].products[0], // Silk Poshak for Laddu Gopal
-  categories[6].products[0], // Vastu Energy Pyramid
+  categories[6].products[0], // Crystal Energy Pyramid for Vastu Correction
+  categories[0].products[1], // Radha Krishna Marble Idol
+  categories[1].products[0], // Lord Ganesha Marble Murti
+  categories[2].products[1], // Sandalwood Ittar
+  categories[3].products[0], // Champa Agarbatti
 ];

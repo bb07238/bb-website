@@ -59,19 +59,20 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
-                    Established in the holy city of Vrindavan, Banke Bihari Creations has been serving 
+                    Established in the vibrant city of Mohali, Banke Bihari Creations has been serving 
                     devotees and spiritual seekers for over two decades. Our journey began with a simple 
                     mission: to provide authentic, high-quality spiritual items that enhance your divine connection.
                   </p>
                   <p>
-                    Located in the heart of Vrindavan, just steps away from the sacred Banke Bihari Temple, 
-                    our shop draws inspiration from the rich spiritual heritage of this holy land. Every product 
-                    in our collection is carefully selected and crafted with deep reverence for traditional methods.
+                    Located in the heart of Mohali's thriving commercial hub in Sector 61, our shop brings 
+                    the essence of traditional spirituality to modern urban life. Every product in our collection 
+                    is carefully selected and crafted with deep reverence for traditional methods and spiritual significance.
                   </p>
                   <p>
                     We understand the importance of purity and authenticity in spiritual practices. That's why 
-                    we work directly with skilled artisans and trusted suppliers to ensure that every item meets 
-                    the highest standards of quality and spiritual significance.
+                    we work directly with skilled artisans and trusted suppliers from across India to ensure that every item meets 
+                    the highest standards of quality and spiritual significance. Our commitment to authenticity 
+                    has made us a trusted name for spiritual essentials in the region.
                   </p>
                 </div>
               </motion.div>
@@ -196,10 +197,10 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="text-left">
                   <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full mb-6">
-                    <span className="text-white text-sm font-medium">📍 Holy Land Location</span>
+                    <span className="text-white text-sm font-medium">📍 Mohali Location</span>
                   </div>
                   <p className="text-purple-100 mb-8 text-lg leading-relaxed">
-                    Experience our collection firsthand in the spiritual atmosphere of Vrindavan. 
+                    Experience our collection firsthand in our modern Mohali showroom. 
                     Our knowledgeable staff will help you find the perfect items for your spiritual needs.
                   </p>
                   
@@ -211,9 +212,9 @@ export default function AboutPage() {
                       <div>
                         <p className="font-semibold text-lg mb-2">Our Location</p>
                         <p className="text-purple-100">
-                          Shop No. 123, Main Market<br />
-                          Vrindavan, Mathura<br />
-                          Uttar Pradesh - 281121
+                          Shop No. 238, Phase 7<br />
+                          Sector 61, Sahibzada Ajit Singh Nagar<br />
+                          Punjab - 160062
                         </p>
                       </div>
                     </div>

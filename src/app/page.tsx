@@ -1,13 +1,23 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { featuredProducts, categories } from '@/lib/data';
-import { Star, Heart, ShoppingBag, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
+import { Star, Heart, ShoppingBag, Sparkles, ArrowRight, CheckCircle, X, MapPin, Store } from 'lucide-react';
 
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+
+  const openProductModal = (product: any) => {
+    setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -83,8 +93,8 @@ export default function Home() {
                 >
                   <div className="h-48 bg-gradient-to-br from-blue-50 to-amber-50 flex items-center justify-center relative">
                     <img 
-                      src="https://m.media-amazon.com/images/I/417KJI6rfRL._AC_UF894,1000_QL80_.jpg" 
-                      alt="Banke Bihari Ji Marble Idol"
+                      src={product.image}
+                      alt={product.name}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -101,13 +111,53 @@ export default function Home() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{product.name}</h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
-                    <button className="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                    <button 
+                      onClick={() => openProductModal(product)}
+                      className="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                    >
                       View Details
                     </button>
                   </div>
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Physical Store Visit Section */}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-amber-500">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center justify-center mb-6">
+                  <Store className="w-12 h-12 text-white mr-4" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">Visit Our Physical Store</h2>
+                </div>
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                  Experience our divine collection in person. Touch, feel, and choose the perfect spiritual items for your home and temple.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a 
+                    href="https://www.google.com/search?q=banke+bihari+creations&oq=bank&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MgYIABBFGDwyCAgBEEUYJxg7MgwIAhBFGDkYsQMYgAQyCAgDEEUYJxg7MgYIBBBFGDwyBggFEEUYPTIGCAYQRRg8MgYIBxBFGDzSAQgxNzUzajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <MapPin className="w-5 h-5 mr-2" />
+                    Get Directions on Google Maps
+                  </a>
+                  <div className="text-white/80 text-sm">
+                    <p>📍 Shop No. 238, Phase 7, Sector 61</p>
+                    <p>📍 Sahibzada Ajit Singh Nagar, Punjab - 160062</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -197,6 +247,104 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          >
+            <div className="relative">
+              <button 
+                onClick={closeModal}
+                className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors"
+              >
+                <X className="w-6 h-6 text-gray-600" />
+              </button>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-gradient-to-br from-blue-50 to-amber-50 p-8 flex items-center justify-center">
+                  <img 
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    className="max-w-full max-h-96 object-contain"
+                  />
+                </div>
+                
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Premium</span>
+                    <div className="flex items-center">
+                      <Star className="w-5 h-5 text-amber-500 fill-current" />
+                      <span className="text-sm text-gray-600 ml-1">4.9</span>
+                    </div>
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedProduct.name}</h2>
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">{selectedProduct.description}</p>
+                  
+                  {selectedProduct.features && (
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Product Features</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedProduct.features.map((feature: string, idx: number) => (
+                          <span 
+                            key={idx}
+                            className="text-sm bg-blue-100 text-blue-800 px-3 py-2 rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Product Details</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        Handcrafted with precision and devotion
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        Premium quality materials
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        Authentic traditional design
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        Perfect for home and temple decoration
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      {selectedProduct.price ? (
+                        <span className="text-3xl font-bold text-gray-800">{selectedProduct.price}</span>
+                      ) : (
+                        <span className="text-xl font-semibold text-green-600">Available</span>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <Link href="/contact" className="flex-1 bg-gradient-to-r from-blue-600 to-amber-500 text-white py-3 rounded-lg font-medium hover:from-blue-700 hover:to-amber-600 transition-all duration-300 text-center">
+                      Enquire Now
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       <Footer />
     </div>
