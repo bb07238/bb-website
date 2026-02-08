@@ -49,7 +49,9 @@ export default function Home() {
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Banke Bihari Creations</h1>
               <p className="text-2xl text-white/90 leading-relaxed mb-8">
-                Discover authentic divine idols, spiritual essentials, and traditional pooja items from the holy land of Vrindavan
+                Banke Bihari Creations is a well-known pooja samagri and religious items shop in Mohali (Sector 61, Phase 7). 
+                We provide Laddu Gopal poshak, Radha Rani vastra, murtis, agarbatti, dhoop, vastu items, 
+                and all types of pooja samagri for devotees in tricity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">

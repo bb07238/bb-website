@@ -59,20 +59,28 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
-                    Established in the vibrant city of Mohali, Banke Bihari Creations has been serving 
-                    devotees and spiritual seekers for over two decades. Our journey began with a simple 
-                    mission: to provide authentic, high-quality spiritual items that enhance your divine connection.
+                    Banke Bihari Creations is a humble effort dedicated to devotion, faith, and purity in worship. 
+                    Rooted in our deep belief in Shri Banke Bihari Ji, Radha Rani, and Sanatan Dharma, 
+                    our shop was started with the intention of providing authentic and sacred pooja items to devotees.
                   </p>
                   <p>
-                    Located in the heart of Mohali's thriving commercial hub in Sector 61, our shop brings 
-                    the essence of traditional spirituality to modern urban life. Every product in our collection 
-                    is carefully selected and crafted with deep reverence for traditional methods and spiritual significance.
+                    We offer a wide range of Laddu Gopal and Radha Rani murtis, along with beautiful vastra, poshak, 
+                    and jewelry crafted with care and devotion. Alongside this, we provide marble dust murtis of all deities, 
+                    premium dhoop and agarbatti, Vastu items, and complete pooja–path samagri required for daily worship and special rituals.
                   </p>
                   <p>
-                    We understand the importance of purity and authenticity in spiritual practices. That's why 
-                    we work directly with skilled artisans and trusted suppliers from across India to ensure that every item meets 
-                    the highest standards of quality and spiritual significance. Our commitment to authenticity 
-                    has made us a trusted name for spiritual essentials in the region.
+                    Every product at Banke Bihari Creations is chosen with the belief that items used in worship should carry 
+                    shuddhta (purity), shraddha (faith), and positivity. We strive to maintain quality, authenticity, 
+                    and respect for tradition in everything we offer.
+                  </p>
+                  <p>
+                    Our aim is not just to sell products, but to become a trusted companion in your spiritual journey. 
+                    Whether it is daily pooja at home, festival celebrations, or gifting sacred items to loved ones, 
+                    we are honored to serve devotees with sincerity and devotion.
+                  </p>
+                  <p>
+                    With the blessings of Shri Banke Bihari Ji, we continue our journey of spreading faith, devotion, 
+                    and divine energy through our work.
                   </p>
                 </div>
               </motion.div>
